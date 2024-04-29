@@ -2,22 +2,26 @@
 
 Rest application template able to handle simple operations on the database such as add,update,delete.
 
+
+### Build and run your application
 1. The first step is to build the application:
-> maven clean install
+```bash 
+mvn clean install
+```
 
 2. Run it in development
-> mvn spring-boot:run
+```bash
+mvn spring-boot:run
+```
 
 3. Check that the first [Check if your application is working](http://localhost:8080/customers/test)
-
 
 4. Now behind the scene you have a in memory database h2 that will be used for testing purposes. 
 Here you will be able to interact directly with the database  [H2-Console-UI](localhost:8080/h2-console)
 
 5. Intellij Launchers added to the project. Please import them on your in case are not automatically detected
 
-
-## Post request examples
+### Post request examples
 Here some examples of how to interact with the Customers table and the operations that are allowed such as: add, update, upsert, delete and retrieve all.
 
 Check if your application is up and running
@@ -64,3 +68,7 @@ Retrieve all customers from the database
 ```bash
 curl --location 'http://localhost:8080/customers/all'
 ```
+
+### Swagger UI
+If your application is running you can check swagger for additional information about the endpoints
+[Swagger UI](http://localhost:8080/swagger-ui/index.html)
