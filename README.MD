@@ -2,8 +2,29 @@
 
 Rest application template able to handle simple operations on the database such as add,update,delete.
 
+### Build your application using docker
 
-### Build and run your application
+Build and start app
+```bash
+docker buildx build --tag rest-app:latest . && docker run --name rest-app-container rest-app:latest
+```
+
+Stop container
+```bash
+docker container stop rest-app-container
+```
+
+Remove container
+```bash
+docker container rm rest-app-container
+```
+
+Remove Image
+```bash
+docker image rm -f rest-app:latest
+```
+
+### Build and run your application manually
 1. The first step is to build the application:
 ```bash 
 mvn clean install
